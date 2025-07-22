@@ -94,9 +94,8 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## Generate dynamic reconfigure parameters in the 'cfg' folder
 generate_dynamic_reconfigure_options(
-  cfg/jetracer.cfg
-  cfg/CalibrateLinear.cfg
-  cfg/laserFilter.cfg
+   cfg/color.cfg
+   cfg/LineFollow.cfg
 )
 
 ###################################
@@ -210,6 +209,3 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
-
-add_executable(jetracer src/jetracer.cpp)
-target_link_libraries(jetracer ${catkin_LIBRARIES})
